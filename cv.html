@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vathurasan | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --accent: #60a5fa;
+            --bg: #0b0f1a;
+            --card-bg: #161e2e;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+        }
+
+        * { box-sizing: border-box; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            margin: 0; 
+            background-color: var(--bg); 
+            color: var(--text-main); 
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation with Logo */
+        nav {
+            background: rgba(11, 15, 26, 0.95);
+            backdrop-filter: blur(15px);
+            padding: 1.2rem 8%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .logo { 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            color: var(--primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .logo span { color: #fff; }
+
+        nav .links a { 
+            color: var(--text-dim); 
+            text-decoration: none; 
+            margin-left: 25px; 
+            font-weight: 500; 
+            font-size: 0.9rem;
+        }
+        nav .links a:hover { color: var(--primary); }
+
+        /* Hero Section */
+        header { 
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #1e3a8a 0%, #0b0f1a 100%);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-name { 
+            font-size: 5rem; 
+            font-weight: 800; 
+            margin: 0; 
+            line-height: 1;
+            background: linear-gradient(to bottom, #fff 40%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 10px 20px rgba(59, 130, 246, 0.3));
+        }
+
+        .subtitle { 
+            font-size: 1.4rem; 
+            color: var(--text-dim); 
+            font-weight: 400; 
+            margin-top: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Main Content */
+        .container { max-width: 1000px; margin: -100px auto 50px; padding: 50px; background: var(--card-bg); border-radius: 24px; border: 1px solid #1e293b; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+
+        h2 { font-size: 2rem; margin-top: 40px; display: flex; align-items: center; }
+        h2::before { content: "0" counter(section); counter-increment: section; font-size: 1rem; color: var(--primary); margin-right: 15px; font-weight: 800; }
+
+        .card { 
+            background: rgba(255,255,255,0.03); 
+            border: 1px solid #1e293b;
+            padding: 30px; 
+            border-radius: 16px; 
+            margin-bottom: 25px;
+        }
+        .card:hover { border-color: var(--primary); background: rgba(59, 130, 246, 0.05); transform: scale(1.02); }
+
+        .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 30px; }
+        .skill-item { 
+            background: #0b0f1a; 
+            padding: 15px; 
+            border-radius: 12px; 
+            text-align: center; 
+            font-weight: 600;
+            border: 1px solid #1e293b;
+            color: var(--accent);
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .contact-box a { color: #fff; text-decoration: none; font-size: 1.3rem; font-weight: 700; display: block; margin: 10px 0; }
+
+        footer { text-align: center; padding: 50px; color: var(--text-dim); border-top: 1px solid #1e293b; }
+
+        @media (max-width: 768px) {
+            .hero-name { font-size: 3rem; }
+            .container { margin-top: -50px; padding: 30px; }
+            nav .links { display: none; } /* Mobile menu simplified */
+        }
+    </style>
+</head>
+<body style="counter-reset: section;">
+
+<nav>
+    <div class="logo">Vathu<span>rasan</span></div>
+    <div class="links">
+        <a href="#about">About</a>
+        <a href="#experience">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<header>
+    <h1 class="hero-name"> Hi I'm VATHURSAN</h1>
+    <div class="subtitle">IT Specialist & Network Engineer</div>
+</header>
+
+<div class="container" id="about">
+    
+    <h2>About Me</h2>
+    <p style="color: var(--text-dim); font-size: 1.1rem; line-height: 1.8;">
+        I am a driven IT professional specializing in hardware systems and network architecture. 
+        With a solid foundation from **SLGTI (NVQ Level 4)** and currently advancing through a **Diploma in ICT**, 
+        I combine academic knowledge with 9 months of rigorous field experience to solve complex technical challenges.
+    </p>
+
+    <h2 id="experience">Experience</h2>
+    <div class="card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+            <strong style="color: var(--primary); font-size: 1.3rem;">Hardware & Network Technician</strong>
+            <span style="color: var(--text-dim); background: #0b0f1a; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;">9 MONTHS</span>
+        </div>
+        <ul style="color: var(--text-dim); padding-left: 20px;">
+            <li>Expert level hardware diagnostics and component-level repairs.</li>
+            <li>Deployed and optimized Local Area Networks (LAN) for improved connectivity.</li>
+            <li>Managed multi-user OS environments and enterprise software suites.</li>
+        </ul>
+    </div>
+
+    <h2 id="education">Education</h2>
+    <div class="card">
+        <strong style="color: #fff;">Diploma in ICT</strong><br>
+        <span style="color: var(--text-dim);">SLGTI | Ongoing</span>
+    </div>
+    <div class="card">
+        <strong style="color: #fff;">NVQ Level 4 - Hardware & Network</strong><br>
+        <span style="color: var(--text-dim);">SLGTI | Class of 2024</span>
+    </div>
+
+    <h2 id="skills">Expertise</h2>
+    <div class="skill-grid">
+        <div class="skill-item">Networking</div>
+        <div class="skill-item">Troubleshooting</div>
+        <div class="skill-item">PC Assembly</div>
+        <div class="skill-item">Windows</div>
+        <div class="skill-item">CCTV</div>
+        
+    </div>
+
+    <h2 id="contact">Contact</h2>
+    <div class="contact-box">
+        <p>Ready to collaborate?</p>
+        <a href="mailto:testcisco514@gmail.com">testcisco514@gmail.com</a>
+        <a href="tel:+94761449482">+94 76 144 9482</a>
+        <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 20px;">Based in Sri Lanka</p>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 All rights reserved.
+</footer>
+
+</body>
+</html>
